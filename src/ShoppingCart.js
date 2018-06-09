@@ -1,15 +1,14 @@
 class ShoppingCart{
-  constructor(cart){
-    this.cart = cart
+  constructor(){
+    this.items=[]
   }
-  getYieldInEuros(){
-    return this.getYieldInKg() * this.price
-  }
-  getCosts(){
-    return this.cost*this.acres
+  addItem(){
+    console.log("push item");
   }
 }
 
 
+
+console.log(cart = new ShoppingCart());
 
 module.exports = { ShoppingCart }
