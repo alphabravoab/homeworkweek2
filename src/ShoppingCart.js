@@ -1,9 +1,12 @@
 class ShoppingCart{
-  constructor(){
+  constructor(items){
     this.items=[]
   }
   addItem(){
-    console.log("push item");
+    return this.items.push({'name': itemName, 'quantity': quantity, 'pricePerUnit': price})
+  }
+  clear(){
+    return this.items.length=0
   }
 }
 

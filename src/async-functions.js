@@ -5,25 +5,48 @@ function giveItBackLater(value, callback){
   setTimeout(loadComplete, 100)
 }
 
-function addSomePromises(promisesPromises){
+function promiseToGiveItBackLater(promisesPromises){
   return new Promise((resolve, reject) => {
     function loadComplete() {
-      if (test === undefined) {
-        reject(promisesPromises.concat(promisesPromises.concat(promisesPromises)))
+      if (promisesPromises === undefined) {
+        reject(promisesPromises)
       }
 
-      resolve(promisesPromises.concat(promisesPromises))
+      resolve(promisesPromises)
     }
     setTimeout(loadComplete, 1000)
   })
 }
 
+function somePromise(promise){
+  return new Promise((resolve, reject) => {
+    function loadComplete() {
+      if (promisesPromises === undefined) {
+        reject(promise)
+      }
 
-function promiseToGiveItBackLater(){
+      resolve(promise)
+    }
 
+  //  setTimeout(loadComplete, 1000)
+  })
 }
 
+function addSomePromises(promisesPromises){
+  return new Promise((resolve, reject) => {
+    function loadComplete() {
+      if (promisesPromises === undefined) {
+        reject(somePromise(promisesPromises))
+      }
 
+      resolve(somePromise(promisesPromises))
+    }
+
+  //  setTimeout(loadComplete, 1000)
+  })
+  .then(somePromise(promisesPromises))
+
+}
 
 
 

@@ -1,3 +1,7 @@
+These are codes I'm too scared to throw away for now since the codes aren't working or aren't working optimal.
+
+
+recursive works but not like I want it too. I'm not sure if it's the if statement or I should map/reduce it first.
 //console.log(object.foo1.foo2)
 
 //  console.log(path[path.length-1]);
@@ -17,7 +21,7 @@ path.map((x,y)=>{
     pathFind(path, object[path[y]])
   }else{ return t[path[y]]}
 
-})*/
+})
 //})
   //return t[path[0]]
 
@@ -34,3 +38,16 @@ path.map((x,y)=>{
       }
     }
     pathFind(path, obj)
+
+
+promises gone wrong
+    return new Promise((resolve, reject) => {
+      function loadComplete() {
+        if (promisesPromises === undefined) {
+          reject(promisesPromises)
+        }
+
+        resolve(promisesPromises)
+      }
+      setTimeout(loadComplete, 1000)
+    })
