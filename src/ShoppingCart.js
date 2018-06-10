@@ -12,7 +12,9 @@ class ShoppingCart{
     return this.items.length=0
   }
   clone(){
-    return new ShoppingCart(this.items.map((item) => Object.assign({}, item )) )
+    const cloneCart= new ShoppingCart()
+    cloneCart.items= this.items.map((x)=> x )
+    return cloneCart
   }
 }
 
