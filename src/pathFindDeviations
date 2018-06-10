@@ -1,0 +1,36 @@
+//console.log(object.foo1.foo2)
+
+//  console.log(path[path.length-1]);
+//    test = path.reduce((acc, val,currentIndex)=>{
+    //  console.log("ACC ", typeof(acc))
+    //  if(t[path[currentIndex]])===undefined){pathFind(val,acc)}
+    //  console.log("CI ", currentIndex);
+    //  console.log("object item", t[path[currentIndex]]);
+  //    if(typeof(t[path[currentIndex]])===object){pathFind(val, acc)}
+    // return acc, val
+//  if (typeof (namer)== object)
+/*
+Attempt for last test not working.
+path.map((x,y)=>{
+  console.log(object[path[y]]);
+  if(TypeError(object[path[y]])==object){
+    pathFind(path, object[path[y]])
+  }else{ return t[path[y]]}
+
+})*/
+//})
+  //return t[path[0]]
+
+
+
+  test code.
+
+  const path = ["foo1", "foo2", "bar"]
+  const obj = {
+      foo1: {
+          foo2: {
+              bar: "Some value"
+          }
+      }
+    }
+    pathFind(path, obj)
