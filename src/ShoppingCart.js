@@ -1,6 +1,6 @@
 class ShoppingCart{
   constructor(items){
-    this.items=[]
+    this.items =[]
   }
   getItems(){
     return this.items
@@ -13,7 +13,8 @@ class ShoppingCart{
   }
   clone(){
     const cloneCart= new ShoppingCart()
-    cloneCart.items= this.items.map((x)=> x )
+    cloneCart.items= this.items.map((x)=> this.addItem(x) )
+
     return cloneCart
   }
 }
