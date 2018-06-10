@@ -1,4 +1,9 @@
 const assert = require("assert")
+const {
+  giveItBackLater,
+  addSomePromises,
+  promiseToGiveItBackLater
+} = require("./async-functions")
 
 describe("Assignment 3 - async", function() {
   it("JS file should exist, and should have named exports", function() {
